@@ -1,1 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Example</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <div>
+                <hr />
+                <h1>LOGO HERE</h1>
+                <hr />
+            </div>
+            <div>
+                <div>
+                    <a class="tab">OverView</a>
+                    <a class="tab">Onboarding</a>
+                    <a class="tab">Monitoring</a>
+                    <a class="tab">Flagging</a>
+                    <a class="tab">Source of Icome</a>
+                    <a class="tab">UAR</a>
+                </div>
+            </div>
+            <div class="profile-container">
+                <img class="profile-image" src="#" alt="Profile Image">
+                <div class="profile-details">
+                    <div class="name">Pranil Bhosale</div>
+                    <div class="email">pranil_2019bciv111@nitsri.ac.in</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="separator"></div>
+        <div id="main-content">
+
+            <div class="heading">
+                <h1>Monitoring</h1>
+            </div>
+            <div class="zero-margin">
+                <div class="switch">
+                    <div class="flex">
+                        <button class="switch-tab" onclick="switchTab('pending')">Pending</button>
+                        <button class="switch-tab" onclick="switchTab('complete')">Completed</button>
+                    </div>
+                    <button class="close-button" onclick="closeAccount()"><i class="fa-regular fa-x"></i> Close Account</button>
+
+                </div>
+                <hr />
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class=" fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Here">
+                </div>
+                <select class="dropdown">
+                    <option value="option1">Trigger Reason</option>
+                    <option value="option2">Option-2</option>
+                    <option value="option3">Option-3</option>
+                </select>
+                <select class="dropdown">
+                    <option value="optionA">Risk Level</option>
+                    <option value="optionB">Option-B</option>
+                    <option value="optionC">Option-C</option>
+                </select>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Risk Level
+                                <span class="sort-icon"><i> &lt;&gt; </i></span>
+                            </th>
+                            <th>Trigger Reason</th>
+                            <th>In queue for<span class="sort-icon"><i> &lt;&gt; </i></span></th>
+                            <th>Date added on<span class="sort-icon"><i> &lt;&gt; </i></span></th>
+                            <th>Previously reviewed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td class="flex">
+                                <div>
+                                    Sam Altman<br>
+                                    samaltman123@gmail.com
+                                </div>
+                                <div><i class="fa-regular fa-arrow-up-right-from-square"></i></div>
+
+                            </td>
+                            <td class="high-risk"><span class="high-risk-dot high-risk"></span>Medium</td>
+                            <td>IP Change</td>
+                            <td>4 days</td>
+                            <td>12 Oct,2023</td>
+                            <td>
+                                Yes<br>
+                                23 Aug,2023
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="flex">
+                                <div>
+                                    Sameer Choubey<br>
+                                    sameerchoubey123@gmail.com
+                                </div>
+                                <div><i class="fa-regular fa-arrow-up-right-from-square"></i></div>
+
+                            </td>
+                            <td class="medium-risk"><span class="medium-risk-dot medium-risk"></span>High</td>
+                            <td>FIFO</td>
+                            <td>4 days</td>
+                            <td>12 Oct,2023</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td class="flex">
+                                <div>
+                                    Adarsh Panikkar<br>
+                                    adarsh123@onjuno.com
+                                </div>
+                                <div><i class="fa-regular fa-arrow-up-right-from-square"></i></div>
+
+                            </td>
+                            <td class="low-risk"><span class="low-risk-dot low-risk"></span>Low</td>
+                            <td>IP Change</td>
+                            <td>5 days</td>
+                            <td>12 Oct,2023</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td class="flex">
+                                <div>
+                                    Pratik Shetty<br>
+                                    pratik3@gmail.com
+                                </div>
+                                <div><i class="fa-regular fa-arrow-up-right-from-square"></i></div>
+
+                            </td>
+                            <td class="high-risk"><span class="high-risk-dot high-risk"></span>High</td>
+                            <td>FIFO</td>
+                            <td>5 days</td>
+                            <td>12 Oct,2023</td>
+                            <td>
+                                Yes<br>
+                                12 Sep,2023
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="flex">
+                                <div>
+                                    Elon Musk<br>
+                                    elon@twitterceo.com
+                                </div>
+                                <div><i class="fa-regular fa-arrow-up-right-from-square"></i></div>
+
+                            </td>
+                            <td class="low-risk"><span class="low-risk-dot low-risk"></span>Low</td>
+                            <td>FIFO</td>
+                            <td>5 days</td>
+                            <td>12 Oct,2023</td>
+                            <td>
+                                Yes<br>
+                                12 Sep,2023
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="flex">
+                                <div>
+                                    Trina Kundu<br>
+                                    trina@onjuno.com
+                                </div>
+                                <div><i class="fa-regular fa-arrow-up-right-from-square"></i></div>
+
+                            </td>
+                            <td class="medium-risk"><span class="medium-risk-dot medium-risk"></span>Low</td>
+                            <td>FIFO</td>
+                            <td>5 days</td>
+                            <td>12 Oct,2023</td>
+                            <td>
+                                Yes<br>
+                                12 Sep,2023
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
