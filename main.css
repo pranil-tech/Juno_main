@@ -3,13 +3,23 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(251, 242, 242);
+    box-sizing: border-box;
+    display: flex;
+    overflow: auto;
 }
 
 .flex {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     height: 42px;
+}
+.flex i{
+    color: rgb(65, 65, 122);
+    position: absolute;
+    right: 8px;
+    transform: translateY(-50%);
+
 }
  
 .zero-margin{
@@ -43,6 +53,10 @@ body {
     cursor: pointer;
     width: 150px;
     font-size: 16px;
+    transition: background-color 0.5s ease;
+}
+.close-button:hover{
+    background-color: orange;
 }
 
 #container {
@@ -92,8 +106,8 @@ body {
     transition: background-color 0.3s;
 }
 
-.tab:hover {
-    background-color: rgb(85, 85, 85);
+.tab:hover,.switch-tab:hover,.dropdown:hover {
+    background-color:rgb(113, 113, 182);
 }
 
 .separator {
@@ -104,16 +118,18 @@ body {
 
 .profile-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 204px;
+    padding-bottom: 20px;
     
 }
 
 .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 20px;
     object-fit: cover;
@@ -141,15 +157,14 @@ body {
 
 .search-box {
     display: flex;
-    background-color: #f4f4f4;
+    background-color: whitesmoke;
     width: 370px;
-    flex: 1;
     padding: 8px; 
-    border:none;
+    border: black;
 }
 
 .search-box input{
-    border: none;
+    border: black;
     background-color: #f4f4f4;
 
 }
@@ -183,6 +198,7 @@ th {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: 90(deg);
 }
 
 .sort-icon i {
@@ -227,6 +243,7 @@ th {
 .low-risk {
     color: green;
 }
-.pop-up{
-    
-}
+/* Styles for screens larger than 768 pixels */
+@media (min-width: 768px) {
+    /* Your styles here */
+  }
